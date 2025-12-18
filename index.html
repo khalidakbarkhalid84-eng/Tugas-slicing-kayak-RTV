@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Digital Nusantara (RTV Style)</title>
+    <link rel="stylesheet" href="style.css">
+        <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Tailwind untuk warna dan font Inter -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rtv-dark': '#0A1931', // Biru Gelap
+                        'rtv-accent': '#00BCD4', // Cyan Terang, sebagai aksen
+                        'rtv-light': '#F0F4F8', // Putih Bersih/Abu-abu Muda
+                        'rtv-secondary': '#1F2937', // Abu-abu gelap untuk elemen sekunder
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-rtv-light">
+
+    <!-- HEADER (Navigation) - Fixed & Dark Blue -->
+    <header class="fixed top-0 left-0 w-full bg-rtv-dark shadow-xl z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <!-- Logo Placeholder -->
+            <a href="#home-page" class="text-3xl font-extrabold text-white tracking-widest">
+                <span class="text-rtv-accent">R</span>TV<span class="text-rtv-accent">NUSAN</span>TARA
+            </a>
+
+            <!-- Navigasi Utama -->
+            <nav class="flex space-x-4">
+                <a href="#home-page" class="nav-link text-white hover:text-rtv-accent px-3 py-2 rounded-lg font-medium">Home</a>
+                <a href="#search-page" class="nav-link text-white hover:text-rtv-accent px-3 py-2 rounded-lg font-medium">Search</a>
+                <a href="#programs-page" class="nav-link text-white hover:text-rtv-accent px-3 py-2 rounded-lg font-medium">Programs</a>
+                <a href="#contact-page" class="nav-link text-white hover:text-rtv-accent px-3 py-2 rounded-lg font-medium">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content Pages Container -->
+    <main>
+        
+        <!-- ============================================== -->
+        <!-- 1. HOME PAGE -->
+        <!-- ============================================== -->
+        <section id="home-page" class="page-content bg-rtv-light">
+            <div class="max-w-7xl mx-auto pt-8 pb-16 px-4 sm:px-6 lg:px-8">
+                
+                <!-- Banner Besar (Portal TV Style) -->
+                <div class="bg-rtv-secondary text-white rounded-xl overflow-hidden shadow-2xl mb-12">
+                    <div class="relative">
+                        <!-- Placeholder Image/Video Slot -->
+                        <div class="h-64 sm:h-96 w-full bg-cover bg-center" style="background-image: url('https://placehold.co/1280x500/0A1931/FFFFFF?text=Streaming+Lagi+Seru%21');">
+                        </div>
+                        <div class="absolute inset-0 bg-rtv-dark bg-opacity-60 flex flex-col justify-center p-8 sm:p-12">
+                            <h1 class="text-4xl sm:text-6xl font-black mb-4 leading-tight">
+                                Tonton Hari Ini: <span class="text-rtv-accent">Aksi Pahlawan Super</span>
+                            </h1>
+                            <p class="text-xl max-w-2xl mb-6">
+                                Saksikan episode terbaru program unggulan kami, tayang malam ini pukul 19:00 WIB. Jangan lewatkan!
+                            </p>
+                            <a href="#programs-page" class="btn bg-rtv-accent hover:bg-cyan-500 text-rtv-dark font-bold py-3 px-8 rounded-full shadow-lg self-start">
+                                Cek Jadwal Lengkap
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seksi Highlight Acara/Konten -->
+                <h2 class="text-3xl font-bold text-rtv-dark mb-6 border-b-4 border-rtv-accent inline-block pb-1">
+                    Highlight Hari Ini
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Kartu Highlight 1 -->
+                    <div class="card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02]">
+                        <div class="h-32 bg-gray-200 rounded-lg mb-4" style="background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/13854.jpg'); background-size: cover;"></div>
+                        <h3 class="text-xl font-semibold text-rtv-dark mb-2">dunia ceria</h3>
+                        <p class="text-gray-600 text-sm">Petualangan edukatif untuk si kecil, setiap pagi. Penuh warna dan tawa!</p>
+                    </div>
+                    <!-- Kartu Highlight 2 -->
+                    <div class="card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02]">
+                        <div class="h-32 bg-gray-200 rounded-lg mb-4" style="background-image: url('../Image/pexels-pixabay-355465.jpg'); background-size: cover;"></div>
+                        <h3 class="text-xl font-semibold text-rtv-dark mb-2">Fokus Malam</h3>
+                        <p class="text-gray-600 text-sm">Acara malam hari yang akan menemani anda sebelum terlelap dalam mimpi.</p>
+                    </div>
+                    <!-- Kartu Highlight 3 -->
+                    <div class="card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02]">
+                        <div class="h-32 bg-gray-200 rounded-lg mb-4" style="background-image: url('https://media.istockphoto.com/id/482206266/id/foto/kabah-di-mekkah.jpg?s=612x612&w=is&k=20&c=-qb4f275SdkId2Nty8CBmYyt0M62ytQq5XISqbrH4Ok='); background-size: cover;"></div>
+                        <h3 class="text-xl font-semibold text-rtv-dark mb-2">Jejak Keajaiban</h3>
+                        <p class="text-gray-600 text-sm">Begitu banyak sekali keajaiban dunia yang tak kita ketahui, dan kita tidak akan mengupas nya satu persatu, kita akan tahu diantara keajaiban dunia itu salah satu nya adalha berdiri nya ka'bah di makkah</p>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 2. SEARCH PAGE -->
+        <!-- ============================================== -->
+        <section id="search-page" class="page-content bg-rtv-light">
+            <div class="max-w-7xl mx-auto pt-8 pb-16 px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl font-extrabold text-rtv-dark mb-8">Pencarian & Katalog Konten</h1>
+
+                <!-- Kotak Pencarian Besar -->
+                <div class="mb-12">
+                    <div class="flex rounded-xl shadow-xl overflow-hidden bg-white border-2 border-rtv-accent">
+                        <input type="text" placeholder="Cari program, berita, atau jadwal..." class="w-full p-4 text-lg border-none focus:outline-none focus:ring-2 focus:ring-rtv-accent">
+                        <button class="bg-rtv-dark text-white px-8 text-lg font-semibold hover:bg-rtv-secondary">
+                            Cari
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Grid Daftar Hasil Pencarian/Katalog -->
+                <h2 class="text-3xl font-bold text-rtv-dark mb-6 border-b-2 border-gray-300 inline-block pb-1">
+                    Hasil Terbaru
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    
+                    <!-- Item Hasil 1 -->
+                    <div class="card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1">
+                        <div class="h-40 bg-gray-300 w-full" style="background-image: url('https://images2.alphacoders.com/492/thumb-1920-49262.jpg'); background-size: cover;"></div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-rtv-dark truncate">sang putri yang tersesat</h3>
+                            <p class="text-sm text-gray-500 mb-2">Tontonan Keluarga</p>
+                            <p class="text-xs text-gray-600 line-clamp-2">Deskripsi singkat tentang episode ini dan temanya. Tonton sekarang atau cek jadwal tayang ulang.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item Hasil 2 -->
+                    <div class="card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1">
+                        <div class="h-40 bg-gray-300 w-full" style="background-image: url('https://i.ytimg.com/vi/2KkhgGr_R3w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDZUN3Ic5BXnA7K41rsMArsoDxPhQ'); background-size: cover;"></div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-rtv-dark truncate">Berita Pagi - Sorotan Ekonomi</h3>
+                            <p class="text-sm text-gray-500 mb-2">Informasi Terkini</p>
+                            <p class="text-xs text-gray-600 line-clamp-2">Laporan mendalam mengenai kebijakan moneter dan dampaknya pada sektor UMKM.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item Hasil 3 -->
+                    <div class="card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1">
+                        <div class="h-40 bg-gray-300 w-full" style="background-image: url('https://foto.kontan.co.id/8hy4OiFoh6cmjlJlGYKHK2oeOWg=/smart/2024/05/23/1092090547p.jpg'); background-size: cover;"></div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-rtv-dark truncate">Serial Komedi Anak Sekolah</h3>
+                            <p class="text-sm text-gray-500 mb-2">Hiburan Remaja</p>
+                            <p class="text-xs text-gray-600 line-clamp-2">Kisah lucu seputar kehidupan remaja di bangku SMA yang penuh drama dan kejutan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item Hasil 4 (Responsive: hidden on small screens) -->
+                    <div class="card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 hidden xl:block">
+                        <div class="h-40 bg-gray-300 w-full" style="background-image: url('https://i.ytimg.com/vi/3oRrJpodBZw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAojtl1UxwfqKMBJx_MFFjT_gJL3A'); background-size: cover;"></div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-rtv-dark truncate">Dokumenter Alam Liar</h3>
+                            <p class="text-sm text-gray-500 mb-2">Edukasi & Alam</p>
+                            <p class="text-xs text-gray-600 line-clamp-2">Penelusuran keindahan hutan tropis Indonesia dan satwa endemiknya yang menakjubkan.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 3. PROGRAMS PAGE -->
+        <!-- ============================================== -->
+        <section id="programs-page" class="page-content bg-rtv-light">
+            <div class="max-w-7xl mx-auto pt-8 pb-16 px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl font-extrabold text-rtv-dark mb-8">Daftar Program Unggulan</h1>
+
+                <!-- Grid Kartu Program/Acara -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Kartu Program 1 -->
+                    <div class="card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl">
+                        <div class="h-48 bg-rtv-dark w-full bg-cover bg-center" style="background-image: url('https://img.freepik.com/foto-gratis/buku-terbuka-dipegang-oleh-tangan_23-2147637594.jpg?semt=ais_hybrid&w=740&q=80'); background-size: cover;"></div>
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-rtv-accent mb-2">Petualangan Ilmu</h2>
+                            <p class="text-sm text-gray-600 mb-3">Menggali pengetahuan dengan cara yang seru dan interaktif.</p>
+                            <div class="flex justify-between items-center text-sm font-medium border-t pt-3">
+                                <span class="text-rtv-dark">Setiap Senin & Rabu</span>
+                                <span class="bg-rtv-accent text-white px-3 py-1 rounded-full text-xs">16:00 WIB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Program 2 -->
+                    <div class="card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl">
+                        <div class="h-48 bg-rtv-dark w-full bg-cover bg-center" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdpSkH2sBKfKqCrOcgiiqahFlnLyqxQCZyS0k5yIFIL6fTIObgjjkWLzjMx_6u0kJKZy8&usqp=CAU'); background-size: cover;"></div>
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-rtv-accent mb-2">Liputan Cepat</h2>
+                            <p class="text-sm text-gray-600 mb-3">Informasi tercepat dan terpercaya, langsung dari lokasi kejadian.</p>
+                            <div class="flex justify-between items-center text-sm font-medium border-t pt-3">
+                                <span class="text-rtv-dark">Setiap Hari</span>
+                                <span class="bg-rtv-accent text-white px-3 py-1 rounded-full text-xs">12:00 WIB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Program 3 -->
+                    <div class="card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl">
+                        <div class="h-48 bg-rtv-dark w-full bg-cover bg-center" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYuu44Nm-EphBumwaBd2gPiQxESaIPlh9BGpxusx3Oj1wXfbkLwyszAU85vatiPfM-FyHBz7NAmJgO944TYmugz0YBpDjux1RI9ZWJukC6M4KdkhN4GJE-sHNApGslY4d6uO_2dxqLZqzeX7qXli2tGohP0ODzNdXYXbI0U5HWfh7NTmQ2R3bsFi8z/s1400/Sakra-wuxia.jpg'); background-size: cover;"></div>
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-rtv-accent mb-2">Bintang Senja</h2>
+                            <p class="text-sm text-gray-600 mb-3">Serial drama romantis yang selalu dinanti, dengan plot yang tak terduga.</p>
+                            <div class="flex justify-between items-center text-sm font-medium border-t pt-3">
+                                <span class="text-rtv-dark">Setiap Selasa & Kamis</span>
+                                <span class="bg-rtv-accent text-white px-3 py-1 rounded-full text-xs">20:30 WIB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 4. CONTACT PAGE -->
+        <!-- ============================================== -->
+        <section id="contact-page" class="page-content bg-rtv-light flex items-center justify-center">
+            <div class="max-w-xl w-full mx-auto p-4 sm:p-8">
+                <div class="bg-white p-8 sm:p-10 rounded-xl shadow-2xl border-t-8 border-rtv-accent">
+                    <h1 class="text-3xl font-extrabold text-rtv-dark mb-2">Hubungi Kami</h1>
+                    <p class="text-gray-500 mb-8">Kami senang mendengar masukan dan pertanyaan Anda. Kirimkan pesan melalui formulir di bawah ini.</p>
+
+                    <!-- Formulir Kontak -->
+                    <form action="#" method="POST" class="space-y-6">
+                        <!-- Nama -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-rtv-accent focus:border-rtv-accent transition duration-150">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Alamat Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-rtv-accent focus:border-rtv-accent transition duration-150">
+                        </div>
+
+                        <!-- Pesan -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Pesan Anda</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-rtv-accent focus:border-rtv-accent transition duration-150"></textarea>
+                        </div>
+
+                        <!-- Tombol Kirim -->
+                        <div class="pt-4">
+                            <!-- Karena ini hanya HTML/CSS, tombol ini tidak akan mengirim data secara nyata, hanya untuk tampilan. -->
+                            <button type="submit" class="btn w-full bg-rtv-dark text-white font-bold py-3 rounded-lg shadow-md hover:bg-rtv-secondary hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-rtv-accent focus:ring-opacity-50">
+                                Kirim Pesan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (Simple & Dark) -->
+    <footer class="bg-rtv-dark text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 Media Digital Nusantara. Inspirasi Gaya RTV. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+.page-content {
+  display: none;
+  min-height: 100vh;
+  padding-top: 80px; /* Memberi ruang untuk header tetap */
+  background-color: #f0f4f8; /* RTV-light */
+}
+
+/* Tampilkan halaman yang dituju oleh hash URL (:target) */
+.page-content:target {
+  display: block;
+}
+
+/* Default: Tampilkan halaman Home saat tidak ada hash */
+body:not(:has(:target)) #home-page {
+  display: block;
+}
+
+/* Animasi Transisi untuk elemen hover */
+.card,
+.nav-link,
+.btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scroll Behavior agar navigasi smooth */
+html {
+  scroll-behavior: smooth;
+}
