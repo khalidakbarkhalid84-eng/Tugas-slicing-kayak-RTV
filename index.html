@@ -37,12 +37,38 @@
             </a>
 
             <!-- Navigasi Utama -->
-            <nav class="flex space-x-4">
-                <a href="#home-page" class="nav-link text-white hover:text-rtv-accent px-3 py-2 rounded-lg font-medium">Home</a>
-                <a href="#search-page" class="nav-link text-white hover:text-rtv-accent px-3 py-2 rounded-lg font-medium">Search</a>
-                <a href="#programs-page" class="nav-link text-white hover:text-rtv-accent px-3 py-2 rounded-lg font-medium">Programs</a>
-                <a href="#contact-page" class="nav-link text-white hover:text-rtv-accent px-3 py-2 rounded-lg font-medium">Contact</a>
-            </nav>
+<header class="fixed top-0 w-full bg-black/80 backdrop-blur z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#" class="text-xl font-bold text-white">
+      RTV<span class="text-rtv-accent">X</span>MEDIA
+    </a>
+
+    <!-- Hamburger Button -->
+    <button id="menu-btn" class="md:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+    <!-- Menu -->
+    <nav
+      id="menu"
+      class="hidden absolute top-full right-6 mt-4 w-48 bg-black rounded-xl shadow-lg
+             md:static md:flex md:w-auto md:bg-transparent md:shadow-none"
+    >
+      <div class="flex flex-col md:flex-row">
+        <a href="#home-page" class="nav-link px-4 py-3 text-white hover:text-rtv-accent">Home</a>
+        <a href="#search-page" class="nav-link px-4 py-3 text-white hover:text-rtv-accent">Search</a>
+        <a href="#programs-page" class="nav-link px-4 py-3 text-white hover:text-rtv-accent">Programs</a>
+        <a href="#contact-page" class="nav-link px-4 py-3 text-white hover:text-rtv-accent">Contact</a>
+      </div>
+    </nav>
+
+  </div>
+</header>
+
         </div>
     </header>
 
@@ -271,6 +297,16 @@
             <p>&copy; 2025 Media Digital Nusantara. Inspirasi Gaya RTV. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
 
 </body>
 </html>
